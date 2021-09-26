@@ -1,5 +1,6 @@
 import 'package:delivery_app/data/data.dart';
 import 'package:delivery_app/models/restaurant.dart';
+import 'package:delivery_app/screens/cart_screen.dart';
 import 'package:delivery_app/screens/restraunt_screen.dart';
 import 'package:delivery_app/widgets/rating_stars.dart';
 import 'package:delivery_app/widgets/recent_orders.dart';
@@ -95,12 +96,13 @@ class _HomeScreenState extends State<HomeScreen> {
             )),
         title: Text('Food Delivery'),
         actions: [
-          TextButton(
-              onPressed: () => {},
+          FlatButton(
+              onPressed: () => Navigator.push(
+                  context, MaterialPageRoute(builder: (_) => CartScreen())),
               child: Text(
                 'Cart (${currentUser.cart.length})',
                 style: TextStyle(color: Colors.white, fontSize: 20.0),
-              ))
+              )),
         ],
       ),
       body: ListView(

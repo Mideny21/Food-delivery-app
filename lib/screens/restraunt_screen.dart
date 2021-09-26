@@ -170,12 +170,15 @@ class _RestrauntScreenState extends State<RestrauntScreen> {
                     'Reviews',
                     style: TextStyle(color: Colors.white, fontSize: 20.0),
                   )),
-              FlatButton(
+              TextButton(
                   onPressed: () {},
-                  padding: EdgeInsets.symmetric(horizontal: 30.0),
-                  color: Theme.of(context).primaryColor,
-                  shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(10.0)),
+                  style: TextButton.styleFrom(
+                    padding: EdgeInsets.symmetric(horizontal: 30.0),
+                    backgroundColor: Theme.of(context).primaryColor,
+                    primary: Theme.of(context).primaryColor,
+                    shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(10.0)),
+                  ),
                   child: Text(
                     'Contact',
                     style: TextStyle(color: Colors.white, fontSize: 20.0),
